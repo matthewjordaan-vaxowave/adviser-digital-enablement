@@ -23,8 +23,8 @@ export default class Home extends Vue {}
 </script>
 
 <style scoped>
-  .home {
-    width: 100%;
-    height: 100%;
-  }
+.home {
+  width: 100%;
+  height: 100%;
+}
 </style>
