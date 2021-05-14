@@ -71,6 +71,7 @@ export default Vue.extend({
         { title: "Wealth Portal" },
         { title: "OM protect" },
         { title: "XPlan" },
+        { title: "MyClient" },
       ],
       profileLinks: [{ title: "Profile" }, { title: "Logout" }],
       showAdvisorLinks: false,
@@ -122,7 +123,7 @@ export default Vue.extend({
 .dropdown {
   position: relative;
   display: inline-block;
-  margin-left: 12em;
+  margin-left: 8em;
 }
 
 /* Dropdown Content (Hidden by Default) */
