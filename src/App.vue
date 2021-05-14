@@ -3,7 +3,7 @@
     <v-app-bar app color="#696969" dark>
       <div class="dropdown">
         <button class="dropbtn" @click="displayAdvisorLinks">
-          Advisor portal
+          Adviser portal
           <span class="arrow down"></span>
         </button>
         <div class="dropdown-content" v-if="showAdvisorLinks" id="advisor">
