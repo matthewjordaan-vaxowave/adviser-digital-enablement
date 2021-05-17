@@ -7,8 +7,9 @@
           <span class="arrow down"></span>
         </button>
         <div class="dropdown-content" v-if="showAdvisorLinks" id="advisor">
-          <a href="#" v-for="link in externalLinks" :key="link.title"
+          <a href="#" v-for="(link, index) in externalLinks" :key="link.title"
             >{{ link.title }}
+            <hr class="hr-format" v-if="index != externalLinks.length - 1" />
           </a>
         </div>
       </div>
@@ -21,10 +22,10 @@
           ><span class="arrow down"></span>
         </button>
         <div class="dropdown-content" v-if="showProfileLinks" id="profile">
-          <a href="#" v-for="link in profileLinks" :key="link.title"
-            >{{ link.title }}<v-icon>{{ link.icon }}</v-icon></a
-          >
-          <v-divider></v-divider>
+          <a href="#" v-for="(link, index) in profileLinks" :key="link.title"
+            >{{ link.title }}<v-icon>{{ link.icon }}</v-icon>
+            <hr class="hr-format" v-if="index != profileLinks.length - 1" />
+          </a>
         </div>
       </div>
     </v-app-bar>
@@ -132,6 +133,7 @@ export default Vue.extend({
 .dropdown-content {
   position: absolute;
   background-color: white;
+  color: black;
   width: 100%;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -142,6 +144,13 @@ export default Vue.extend({
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  color: black;
+}
+
+.hr-format {
+  background-color: lightgray;
+  border: none;
+  height: 1px;
 }
 
 /* Change color of links on hover */
