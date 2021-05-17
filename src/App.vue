@@ -62,7 +62,7 @@ export default Vue.extend({
       items: [
         {
           title: "Dashboard",
-          icon: "mdi-chart-areaspline",
+          icon: "mdi-home",
           path: "/Dashboard",
         },
         { title: "Clients", icon: "mdi-account", path: "/Clients" },
