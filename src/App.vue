@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar app color="#696969" dark>
+    <v-app-bar app clipped-left color="#696969" dark>
       <div class="dropdown">
         <button class="dropbtn" @click="displayAdvisorLinks">
           Adviser portal
@@ -28,26 +28,24 @@
         </div>
       </div>
     </v-app-bar>
-
+    <v-navigation-drawer app clipped color="#D3D3D3" width="7%" height="100%">
+      <v-list dense>
+        <v-list-item
+          v-for="item in items"
+          :key="item.title"
+          link
+          :to="item.path"
+        >
+          <v-list-item-content>
+            <v-list-item-icon>
+              <v-icon>{{ item.icon }}</v-icon>
+            </v-list-item-icon>
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
     <v-main>
-      <v-navigation-drawer
-        permanent
-        float
-        color="#D3D3D3"
-        width="7%"
-        height="100%"
-      >
-        <v-list dense>
-          <v-list-item v-for="item in items" :key="item.title" link>
-            <v-list-item-content>
-              <v-list-item-icon>
-                <v-icon>{{ item.icon }}</v-icon>
-              </v-list-item-icon>
-              <v-list-item-title>{{ item.title }}</v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-        </v-list>
-      </v-navigation-drawer>
       <router-view />
     </v-main>
   </v-app>
@@ -62,8 +60,12 @@ export default Vue.extend({
   data() {
     return {
       items: [
-        { title: "Dashboard", icon: "mdi-chart-areaspline" },
-        { title: "Clients", icon: "mdi-account" },
+        {
+          title: "Dashboard",
+          icon: "mdi-chart-areaspline",
+          path: "/Dashboard",
+        },
+        { title: "Clients", icon: "mdi-account", path: "/Clients" },
       ],
       externalLinks: [
         { title: "Gateway" },
@@ -129,6 +131,7 @@ export default Vue.extend({
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
   position: absolute;
+  background-color: white;
   width: 100%;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
