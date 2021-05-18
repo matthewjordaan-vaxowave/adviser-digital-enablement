@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-card color="grey" class="tableShift" tile>
-      <v-card-title> MY CLIENTS </v-card-title>
+      <v-card-title>CLIENTS </v-card-title>
       <v-card class="tableShift">
         <v-card-title>
           <v-text-field
