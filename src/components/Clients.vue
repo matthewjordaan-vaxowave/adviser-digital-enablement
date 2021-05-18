@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-card color="#D3D3D3" class="tableShift" tile fluid>
+    <v-card color="#D3D3D3" class="tableShift" tile>
       <v-card-title>CLIENTS </v-card-title>
       <v-card class="tableShift">
         <v-card-title>
