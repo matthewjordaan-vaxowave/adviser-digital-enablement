@@ -21,12 +21,5 @@
 </template>
 <script lang="ts" src="./scripts/dashboard.ts"></script>
 <style scoped src="./stylesheets/dashboard.css"></style>
-import DashboardDoughnut from "./Charts/DashboardDoughnut.vue";
-  components: { DashboardDoughnut },
-}
-.shift-button-text {
-  margin-left: 8em;
-}
 
-.white-font {
-  color: white;
+
