@@ -8,7 +8,6 @@ import Dashboard from "../components/Dashboard.vue";
 
 export default Vue.extend({
   name: "Clients",
-
   components: {
     Dashboard,
   },

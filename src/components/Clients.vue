@@ -14,7 +14,9 @@
           >
         </v-card-title>
         <v-data-table :headers="headers" :items="data" :search="search"
-          ><!-- eslint-disable-next-line -->
+          :footer-props="{
+         'items-per-page-options': rowsPerPageItems
+         }"><!-- eslint-disable-next-line -->
           <template v-slot:item.clientProfile="{ item }">
             <v-btn elevation="2" rounded
               >Download
