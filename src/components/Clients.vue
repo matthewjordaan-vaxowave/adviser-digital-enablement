@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="shift">
     <v-card color="#D3D3D3" class="shift" tile>
       <v-card-title>CLIENTS </v-card-title>
       <v-card class="shift">
@@ -9,24 +9,19 @@
             append-icon="mdi-magnify"
             label="Filter"
             hide-details
-          ></v-text-field>
+            class="search"
+            ><v-btn><v-icon>mdi-magnify</v-icon></v-btn></v-text-field
+          >
         </v-card-title>
-        <v-data-table
-          :headers="headers"
-          :items="data"
-          :search="search"
-        ><!-- eslint-disable-next-line --> 
-        <template v-slot:item.clientProfile="{ item }">
-         <v-btn
-         elevation="2"
-         rounded
-         >Download
-         <v-icon color="green">
-          mdi-download
-         </v-icon>
-       </v-btn>
-    </template>
-    </v-data-table>
+        <v-data-table :headers="headers" :items="data" :search="search"
+          ><!-- eslint-disable-next-line -->
+          <template v-slot:item.clientProfile="{ item }">
+            <v-btn elevation="2" rounded
+              >Download
+              <v-icon color="green"> mdi-download </v-icon>
+            </v-btn>
+          </template>
+        </v-data-table>
       </v-card>
     </v-card>
   </div>
@@ -56,84 +51,84 @@ export default Vue.extend({
           contactDetails: "0662339178",
           Id: "9501180681083",
           nextReview: "20 Jun 2021- 3 days",
-          clientProfile: "download",
+          clientProfile: "",
         },
         {
           name: "Mama  Matomane",
           contactDetails: "0662339178",
           Id: "9501180681083",
           nextReview: "20 Jun 2021- 3 days",
-          clientProfile: "download",
+          clientProfile: "",
         },
         {
           name: "Sibonelo Matomane",
           contactDetails: "0662339178",
           Id: "9501180681083",
           nextReview: "20 Jun 2021- 3 days",
-          clientProfile: "download",
+          clientProfile: "",
         },
         {
           name: "Ntando Matomane",
           contactDetails: "0662339178",
           Id: "9501180681083",
           nextReview: "20 Jun 2021- 3 days",
-          clientProfile: "download",
+          clientProfile: "",
         },
         {
           name: "Mlibo Matomane",
           contactDetails: "0662339178",
           Id: "9501180681083",
           nextReview: "20 Jun 2021- 3 days",
-          clientProfile: "download",
+          clientProfile: "",
         },
         {
           name: "Asemahle Nondula",
           contactDetails: "0662339178",
           Id: "9501180681083",
           nextReview: "20 Jun 2021- 3 days",
-          clientProfile: "download",
+          clientProfile: "",
         },
         {
           name: "Sisi Matomane",
           contactDetails: "0662339178",
           Id: "9501180681083",
           nextReview: "20 Jun 2021- 3 days",
-          clientProfile: "download",
+          clientProfile: "",
         },
         {
           name: "Bhuti Matomane",
           contactDetails: "0662339178",
           Id: "9501180681083",
           nextReview: "20 Jun 2021- 3 days",
-          clientProfile: "download",
+          clientProfile: "",
         },
         {
           name: "Makazi Matomane",
           contactDetails: "0662339178",
           Id: "9501180681083",
           nextReview: "20 Jun 2021- 3 days",
-          clientProfile: "download",
+          clientProfile: "",
         },
         {
           name: "Likho Matomane",
           contactDetails: "0662339178",
           Id: "9501180681083",
           nextReview: "20 Jun 2021- 3 days",
-          clientProfile: "download",
+          clientProfile: "",
         },
         {
           name: "Sikho Matomane",
           contactDetails: "0662339178",
           Id: "9501180681083",
           nextReview: "20 Jun 2021- 3 days",
-          clientProfile: "download",
+          clientProfile: "",
         },
         {
           name: "S'yanda Matomane",
           contactDetails: "0662339178",
           Id: "9501180681083",
           nextReview: "20 Jun 2021- 3 days",
-          clientProfile: "download",
+          clientProfile: "",
         },
       ],
     };
@@ -142,13 +137,13 @@ export default Vue.extend({
 </script>
 <style scoped>
 .search {
-  margin-left: 80em;
+  margin-left: 45em;
 }
 
 .shift {
-  margin-left: 4em;
+  margin-left: 3em;
   margin-top: 3em;
-  margin-right: 5em;
-  padding-bottom: 3em;
+  margin-right: 3em;
+  padding-bottom: 4em;
 }
 </style>
