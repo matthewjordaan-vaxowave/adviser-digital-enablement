@@ -1,8 +1,8 @@
 <template>
   <div>
-    <v-card color="#D3D3D3" class="tableShift" tile>
+    <v-card color="#D3D3D3" class="shift" tile>
       <v-card-title>CLIENTS </v-card-title>
-      <v-card class="tableShift">
+      <v-card class="shift">
         <v-card-title>
           <v-text-field
             v-model="search"
@@ -145,7 +145,7 @@ export default Vue.extend({
   margin-left: 80em;
 }
 
-.tableShift {
+.shift {
   margin-left: 4em;
   margin-top: 3em;
   margin-right: 5em;
