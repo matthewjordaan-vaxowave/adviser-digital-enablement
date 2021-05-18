@@ -4,7 +4,7 @@
       <v-card-title><span>GOALS</span> </v-card-title>
       <v-card class="shift">
         <v-card-title
-          >345 Customers
+          >60 Customers
           <span class="shift-title-text"
             >Information as at: {{ lastUpdatedDate | date }}</span
           >
