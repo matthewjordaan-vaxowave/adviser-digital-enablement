@@ -19,29 +19,10 @@
     </v-card>
   </div>
 </template>
-<script lang="ts">
-import Vue from "vue";
+<script lang="ts" src="./scripts/dashboard.ts"></script>
+<style scoped src="./stylesheets/dashboard.css"></style>
 import DashboardDoughnut from "./Charts/DashboardDoughnut.vue";
-export default Vue.extend({
   components: { DashboardDoughnut },
-  name: "Dashboard",
-  data() {
-    return {
-      lastUpdatedDate: new Date(),
-    };
-  },
-});
-</script>
-<style scoped>
-.search {
-  margin-left: 45em;
-}
-
-.shift {
-  margin-left: 3em;
-  margin-top: 3em;
-  margin-right: 3em;
-  padding-bottom: 4em;
 }
 .shift-button-text {
   margin-left: 8em;
@@ -49,9 +30,3 @@ export default Vue.extend({
 
 .white-font {
   color: white;
-}
-.shift-title-text {
-  margin-left: 30em;
-  padding-right: 0em;
-}
-</style>
