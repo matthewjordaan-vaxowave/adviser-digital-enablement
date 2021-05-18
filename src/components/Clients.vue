@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-card color="grey" class="tableShift" tile>
+    <v-card color="#D3D3D3" class="tableShift" tile fluid>
       <v-card-title>CLIENTS </v-card-title>
       <v-card class="tableShift">
         <v-card-title>
@@ -17,13 +17,14 @@
           :search="search"
         ><!-- eslint-disable-next-line --> 
         <template v-slot:item.clientProfile="{ item }">
-      <v-btn
-        elevation="2"
-        rounded
-        >Download
-        <v-icon color="green">
-        mdi-download
-      </v-icon></v-btn>
+         <v-btn
+         elevation="2"
+         rounded
+         >Download
+         <v-icon color="green">
+          mdi-download
+         </v-icon>
+       </v-btn>
     </template>
     </v-data-table>
       </v-card>
