@@ -82,8 +82,13 @@ export default Vue.extend({
       showAdvisorLinks: false,
       showProfileLinks: false,
       currentUser: "John Kani",
-      messages: 4,
       show: false,
+      messages: 0,
+      notifications: [
+        { message: "Client XY has a birthday", read: false },
+        { message: "Client XY has a birthday", read: false },
+        { message: "Client XY has a birthday", read: true },
+      ],
     };
   },
   methods: {
@@ -103,9 +108,14 @@ export default Vue.extend({
     },
     viewMessages() {
       this.show = true;
-      this.messages = 0;
+      this.messages = 0
     },
   },
+  mounted() {
+  this.$nextTick(function () {
+    this.messages = this.notifications.filter((x) => x.read == false).length;
+  })
+}
 });
 </script>
 <style scoped>
