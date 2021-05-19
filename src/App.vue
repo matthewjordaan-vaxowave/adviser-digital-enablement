@@ -14,7 +14,9 @@
         </div>
       </div>
       <v-spacer></v-spacer>
-      <v-icon>mdi-bell-outline</v-icon>
+      <v-badge :content="messages" :value="messages" color="green" overlap>
+        <v-icon large @click="viewMessages"> mdi-bell-outline </v-icon>
+      </v-badge>
       <div class="dropdown" style="margin-left: 1em">
         <button class="dropbtn" @click="displayProfileLinks">
           <v-icon>mdi-account-circle-outline</v-icon
@@ -80,6 +82,8 @@ export default Vue.extend({
       showAdvisorLinks: false,
       showProfileLinks: false,
       currentUser: "John Kani",
+      messages: 4,
+      show: false,
     };
   },
   methods: {
@@ -96,6 +100,10 @@ export default Vue.extend({
       if (element) {
         element.style.display = "block";
       }
+    },
+    viewMessages() {
+      this.show = true;
+      this.messages = 0;
     },
   },
 });
