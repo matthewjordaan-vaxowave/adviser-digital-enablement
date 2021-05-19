@@ -13,7 +13,7 @@
         <dashboard-doughnut />
         <p class="shift-button-text">
           10 Customers need an urgent intervention. Help them Get back on track.
-          <v-btn class="white-font" rounded color="green">View All </v-btn>
+          <v-btn class="white-font" rounded color="green" width="12em">View All </v-btn>
         </p>
       </v-card>
     </v-card>
