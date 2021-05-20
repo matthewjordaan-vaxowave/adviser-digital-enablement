@@ -14,9 +14,7 @@
         </div>
       </div>
       <v-spacer></v-spacer>
-      <v-badge :content="messages" :value="messages" color="green" overlap>
-        <v-icon large @click="viewMessages"> mdi-bell-outline </v-icon>
-      </v-badge>
+      <notification />
       <div class="dropdown" style="margin-left: 1em">
         <button class="dropbtn" @click="displayProfileLinks">
           <v-icon>mdi-account-circle-outline</v-icon
@@ -56,10 +54,12 @@
 
 <script lang="ts">
 import Vue from "vue";
-
+import Notification from "./components/Notification.vue";
 export default Vue.extend({
   name: "App",
-
+  components: {
+    Notification,
+  },
   data() {
     return {
       items: [
@@ -82,13 +82,6 @@ export default Vue.extend({
       showAdvisorLinks: false,
       showProfileLinks: false,
       currentUser: "John Kani",
-      show: false,
-      messages: 0,
-      notifications: [
-        { message: "Client XY has a birthday", read: false },
-        { message: "Client XY has a birthday", read: false },
-        { message: "Client XY has a birthday", read: true },
-      ],
     };
   },
   methods: {
@@ -106,16 +99,7 @@ export default Vue.extend({
         element.style.display = "block";
       }
     },
-    viewMessages() {
-      this.show = true;
-      this.messages = 0
-    },
   },
-  mounted() {
-  this.$nextTick(function () {
-    this.messages = this.notifications.filter((x) => x.read == false).length;
-  })
-}
 });
 </script>
 <style scoped>
