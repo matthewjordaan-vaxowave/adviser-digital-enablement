@@ -1,6 +1,7 @@
 <template>
   <v-app>
-    <v-app-bar app clipped-left color="#696969" dark>
+    <v-app-bar app clipped-left color="#301934" dark>
+      <img src="./assets/omlogo.png" width="45px">
       <div class="dropdown">
         <button class="dropbtn" @click="displayAdvisorLinks">
           Adviser portal
@@ -128,7 +129,7 @@ export default Vue.extend({
 .dropdown {
   position: relative;
   display: inline-block;
-  margin-left: 8em;
+  margin-left: 5em;
 }
 
 /* Dropdown Content (Hidden by Default) */
